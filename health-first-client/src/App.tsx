@@ -1,16 +1,15 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import { ThemeProvider, CssBaseline } from '@mui/material';
+import { theme } from './theme';
+import ProviderLoginPage from './pages/ProviderLoginPage';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-     
-    </>
-  )
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <ProviderLoginPage />
+    </ThemeProvider>
+  );
 }
 
-export default App
+export default App;
